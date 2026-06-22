@@ -1,0 +1,7 @@
+# Reference only. Runtime scripts generate the active CPU LMCache config from
+# .env.
+chunk_size: 256
+local_cpu: true
+max_local_cpu_size: 8
+remote_url: null
+remote_serde: "naive"

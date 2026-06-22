@@ -1,0 +1,31 @@
+# KV Bench physical-node Python runtime.
+#
+# Install standard runtime packages:
+#   python -m pip install -r requirements.txt
+#
+# LMCache 0.4.3 is intentionally installed separately by the bootstrap code
+# with --no-build-isolation --no-deps because the source archive reports
+# package metadata version 0.0.0. See kvbench_physical/services/runtime.py.
+#
+# Complete manual setup after this file:
+#   python -m pip install --no-build-isolation --no-deps \
+#     https://files.pythonhosted.org/packages/77/a1/b5aa14a3c8f095c180b6df0a9e7bddd44e1d446726148f5bc3a7b6afad36/lmcache-0.4.3.tar.gz
+
+vllm==0.21.0
+ray
+redis==7.4.0
+requests>=2.31.0
+torchvision==0.21.0+cu129
+
+# LMCache build/runtime dependencies used before the direct LMCache install.
+numpy<=2.2.6
+aiofile
+aiofiles
+awscrt
+cufile-python
+cupy-cuda12x
+nixl
+nvtx
+opentelemetry-exporter-prometheus
+setuptools-scm
+sortedcontainers

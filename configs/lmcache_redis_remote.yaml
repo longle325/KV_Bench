@@ -1,0 +1,10 @@
+# Reference only. Runtime scripts generate the active Redis LMCache config from
+# .env so IPs/ports/chunk sizes are not hardcoded here.
+chunk_size: 16
+local_cpu: true
+max_local_cpu_size: 8
+remote_url: null
+remote_serde: "naive"
+store_location: "RemoteBackend"
+retrieve_locations:
+  - "RemoteBackend"
